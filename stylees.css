@@ -1,0 +1,501 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1f2e 0%, #0d1524 100%);
+    color: #f0f0f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    border-bottom: 3px solid #4CAF50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
+}
+
+.logo h1 {
+    color: #4CAF50;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+div.div-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-links {
+    display: flex;
+    gap: 30px;
+}
+
+.div-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.div-links a:hover {
+    background-color: #4CAF50;
+    color: #000;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://www.geroncraft.ru/wp-content/uploads/2020/03/2b2t-Spawn-Map-20000x20000-01.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #3d8b40;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.advertisement {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    padding: 40px;
+    margin: 50px 0;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.advertisement::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+.advertisement h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+.advertisement p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ad-button {
+    background-color: #000;
+    color: #4CAF50;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.ad-button:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+.incomplete-notice {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    border-top: 3px dashed #4CAF50;
+}
+
+.incomplete-notice h3 {
+    font-size: 32px;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.incomplete-notice p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid #4CAF50;
+    margin-top: 50px;
+}
+
+
+.admin {
+        text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BRR3GXRJhatiBS0tFJ7OMsYDCup7BIsGJQ&s');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+
+.lox {
+        text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2IkFi0a8tV8cCvK8CwgAaEeUbOto67LL42g&s');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+.sozdatel {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:https://app2top.ru/wp-content/uploads/2019/04/Notch-1024x576.jpg&s');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+.glavnyi-administrator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://www.grm.ru/pic_archive/jpg/https://ir.ozone.ru/s3/multimedia-1-5/c400/8195354177.jpg-standart-t5-17_2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+.teh-administrator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://www.grm.ru/pic_archive/jpg/table-standart-t5-17_2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+.administrator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://печати-тут.рф/wa-data/public/shop/products/39/12/1239/images/3096/3096.970.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+
+.glavnyi-moderator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://печати-тут.рф/wa-data/public/shop/products/39/12/1239/images/3096/3096.970.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+.starshiy-moderator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://pro-promotion.ru/upload/dev2fun.imagecompress/webp/medialibrary/72b/72b0789a1f8b76b9b08afbde0caf2407.webp');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+
+.moderator {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://semantica.in/wp-content/uploads/2017/11/501485992-1.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');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+.builder {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/f71453df-3c7c-49f2-ae93-1656c962312d/worldbuilder_Thumbnail_0.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+.helper {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMLoNuxhd-jmTZNaBa69nHxc_hNbPu1e2FQ&s');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0;
+    border-radius: 15px;
+    border: 3px solid #7a4caf;
+    box-shadow: 0 0 30px rgba(32, 196, 119, 0.3);
+}
+
+
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 22px;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .div-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .div-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .div-links a {
+        display: block;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #4CAF50;
+    }
+    
+    .hero {
+        padding: 60px 15px;
+        margin: 15px 0;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .advertisement {
+        padding: 30px 15px;
+        margin: 30px 0;
+    }
+    
+    .advertisement h3 {
+        font-size: 24px;
+    }
+    
+    .advertisement p {
+        font-size: 16px;
+    }
+    
+    .ad-button {
+        padding: 10px 25px;
+        font-size: 16px;
+        width: 90%;
+        max-width: 250px;
+    }
+    
+    .incomplete-notice {
+        padding: 60px 15px;
+        margin-top: 30px;
+    }
+    
+    .incomplete-notice h3 {
+        font-size: 24px;
+    }
+    
+    .incomplete-notice p {
+        font-size: 16px;
+    }
+
+    .admin, 
+    .lox, 
+    .sozdatel, 
+    .glavnyi-administrator, 
+    .teh-administrator, 
+    .administrator, 
+    .glavnyi-moderator, 
+    .starshiy-moderator, 
+    .moderator, 
+    .builder, 
+    .helper {
+        padding: 60px 15px;
+        margin: 20px 0;
+    }
+    .sozdatel {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://app2top.ru/wp-content/uploads/2019/04/Notch-1024x576.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .teh-administrator {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://www.grm.ru/pic_archive/jpg/table-standart-t5-17_2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    footer {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    .advertisement::before {
+        animation: none;
+        display: none;
+    }
+}
